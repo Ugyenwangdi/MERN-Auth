@@ -1,6 +1,7 @@
 import styles from "./styles.module.css";
+import {UserList} from "../../components";
 
-const Main = () => {
+const Dashboard = () => {
 	const handleLogout = () => {
 		localStorage.removeItem("token");
 		window.location.reload();
@@ -14,8 +15,11 @@ const Main = () => {
 					Logout
 				</button>
 			</nav>
+
+			<UserList />
+
 		</div>
 	);
 };
 
-export default Main;
+export default Dashboard;
